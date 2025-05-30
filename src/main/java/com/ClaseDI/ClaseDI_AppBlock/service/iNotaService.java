@@ -10,4 +10,5 @@ public interface iNotaService {
 
     void crearNota (Nota nota);
     void eliminarNota (Long id);
+    void editarNota (Long id, Nota notaActualizada);
 }

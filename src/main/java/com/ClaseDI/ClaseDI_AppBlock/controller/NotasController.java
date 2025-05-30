@@ -30,17 +30,24 @@ public class NotasController {
         return notaService.obtenerPorID(id);
     }
 
-    @PostMapping
+    @PostMapping ("/crear")
     public ResponseEntity<String> crearNota(@RequestBody Nota nota) {
         notaService.crearNota(nota);
         return ResponseEntity.ok("Nota creada con éxito");
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/borrar/{id}")
     public ResponseEntity<String> eliminarNota(@PathVariable  Long id) {
         notaService.eliminarNota(id);
         return ResponseEntity.ok("Nota eliminada con éxito");
     }
+
+    @PutMapping("/editar/{id}")
+    public ResponseEntity<String> editarNota (@PathVariable Long id, @RequestBody Nota notaActualizada){
+        notaService.editarNota(id, notaActualizada);
+        return ResponseEntity.ok("Nota actualizada con éxito!");
+    }
+
 
 
 }
