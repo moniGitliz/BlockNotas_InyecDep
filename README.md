@@ -10,7 +10,6 @@ Esta aplicación permite crear, consultar, actualizar y eliminar notas utilizand
 - Postman
 
 ## Endpoints disponibles
-## Endpoints disponibles
 
 | Método | Endpoint             | Descripción                        |
 |--------|----------------------|------------------------------------|
